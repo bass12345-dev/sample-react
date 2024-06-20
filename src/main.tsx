@@ -13,6 +13,18 @@ const router = createBrowserRouter([
     element:<Login />,
     errorElement : <PageError />
   },
+
+  {
+    path: '/user',
+    element:<App />,
+    children : [ 
+      {
+      path: '/user/dashboard',
+      element:<Profile />
+    },
+  ],
+  },
+  
   {
     path: '/home',
     element:<App />,
