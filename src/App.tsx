@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import axios from 'axios';
+import Button from '@mui/material/Button';
 
 function App() {
   const [count, setCount] = useState(2);
@@ -67,6 +68,7 @@ function App() {
             
         </tbody>
      </table>
+     <Button variant="contained">Hello world</Button>
     </>
   )
 }

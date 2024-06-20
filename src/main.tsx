@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import Login from './pages/auth/Login.tsx';
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import './index.css'
 import PageError from './page_error/PageError.tsx';
 import Profile from './pages/Profile.tsx';
+import Login from './admin/pages/auth/Login.tsx';
 
 const router = createBrowserRouter([
   {
