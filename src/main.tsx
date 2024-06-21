@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import { createBrowserRouter,RouterProvider} from 'react-router-dom';
 import './index.css'
 import PageError from './page_error/PageError.tsx';
-import Profile from './pages/Profile.tsx';
 import Login from './admin/pages/auth/Login.tsx';
+import Admin_layout from './admin/layout/admin_layout.tsx';
+import Admin_Dashboard from './admin/pages/dashboard/Admin_Dashboard.tsx';
+
 
 const router = createBrowserRouter([
   {
@@ -15,23 +16,12 @@ const router = createBrowserRouter([
   },
 
   {
-    path: '/user',
-    element:<App />,
+    path: '/admin',
+    element:<Admin_layout />,
     children : [ 
       {
-      path: '/user/dashboard',
-      element:<Profile />
-    },
-  ],
-  },
-  
-  {
-    path: '/home',
-    element:<App />,
-    children : [ 
-      {
-      path: '/home/profile/:id',
-      element:<Profile />
+      path: '/admin/dashboard',
+      element:<Admin_Dashboard />
     },
   ],
   }
